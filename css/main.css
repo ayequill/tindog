@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  color: hsl(240deg, 4%, 95%);
+}
+
+.container {
+  width: 100%;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  padding: 0.5em;
+}
+
+.nav-links:not(:nth-child(2)) {
+  width: 30%;
+}
+
+.nav-links:nth-child(2) {
+  width: 50%;
+}
+
+.nav-links:first-child {
+  justify-self: start;
+}
+
+.nav-links:last-child {
+  justify-self: end;
+}
+
+.feed {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "user user" "nope like";
+  gap: 1.4em;
+  padding: 0.5em;
+  position: relative;
+}
+
+.user {
+  grid-area: user;
+  position: relative;
+}
+.user .avatar {
+  width: 100%;
+}
+.user h3 {
+  position: absolute;
+  bottom: 15%;
+  left: 3%;
+  font-size: 2rem;
+  text-shadow: 1px 0px hsl(240deg, 5%, 78%);
+}
+.user p {
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+  color: hsl(240deg, 5%, 98%);
+}
+
+.nope-icon {
+  grid-area: nope;
+  justify-self: end;
+  align-self: center;
+}
+
+.like-icon {
+  grid-area: like;
+  align-self: center;
+}
+
+.icon {
+  width: 3.5em;
+}
+
+.nope-icon, .like-icon {
+  padding: 0.5em;
+  border-radius: 50%;
+}
+.nope-icon:hover, .nope-icon:focus, .like-icon:hover, .like-icon:focus {
+  background: rgb(219, 255, 244);
+}
+
+.hidden {
+  display: none;
+}
+
+.like, .nope {
+  position: absolute;
+  width: 53%;
+  top: 8.5%;
+  left: 3%;
+  transform: rotate(-40deg);
+}/*# sourceMappingURL=main.css.map */
